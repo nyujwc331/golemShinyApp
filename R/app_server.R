@@ -1,4 +1,8 @@
 #' @import shiny
+#' @import ggplot2
+#' @import dplyr
+#' @import magrittr
+
 app_server <- function(input, output,session) {
   # List the first level callModules here
   
@@ -21,4 +25,6 @@ app_server <- function(input, output,session) {
          pch = 20, cex = 3)
     points(clusters()$centers, pch = 4, cex = 4, lwd = 4)
   })
+  
+  callModule(plotz, "counter1")
 }

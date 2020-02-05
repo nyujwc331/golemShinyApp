@@ -17,7 +17,8 @@ app_ui <- function() {
                        min = 1, max = 9)
         ),
         mainPanel(
-          plotOutput('plot1')
+          plotOutput('plot1'),
+          plotUI("counter1", "Select a Species to filter the plot")
         )
       )
     )
